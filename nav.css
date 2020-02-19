@@ -1,0 +1,63 @@
+body {
+    text-align: center;
+    background-color: floralwhite;
+}
+
+.sticky {
+    position: -webkit sticky;
+    position: sticky;
+    top: 0px;
+}
+
+div.nav {
+    background-color: lightblue;
+}
+
+ul.nav {
+    background-color: lightblue;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    float: left;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightblue;
+    z-index: 1;
+}
+
+.dropdown-content .navButton:hover {
+    background-color: lightblue;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+ul.nav a{
+    text-decoration: none;
+    color: darkblue;
+}
+
+.navButton, .dropButton{
+    display: inline-block;
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+.navButton a {
+    min-width: inherit;
+}
+
+.nav .navButton:hover{
+    background-color: aliceblue;
+}
