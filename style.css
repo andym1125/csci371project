@@ -1,0 +1,39 @@
+/* ***** General ***** */
+
+body
+{
+    text-align: center;
+    background-color: #e3f1ff;
+}
+
+input
+{
+    border-radius: 10px;
+    border: 1px solid #1a3a57;
+    padding: 3px;
+    background-color: white;
+}
+
+input[type="submit"]
+{
+    width: 100%;
+    background-color: white;
+}
+
+input[type="submit"]:hover
+{
+    color: white;
+    background-color: #1a3a57;
+}
+
+/* ***** Page Specific ***** */
+
+form.signup
+{
+    display: inline-block;
+    text-align: left;
+    padding: 5px;
+    border: 1px solid #1a3a57;
+    border-radius: 5px;
+    background-color: #bcffab;
+}
