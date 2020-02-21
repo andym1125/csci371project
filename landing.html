@@ -1,0 +1,72 @@
+<!DocType HTML>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+        <style>
+            body.landing
+            {
+                background-image: url("friends.jpg");
+                background-position: center;
+            }
+            
+            .signin
+            {
+                background-color: aliceblue;
+                
+                width: 33%;
+                padding: 0px 10px 10px;
+                border-radius: 7px;
+                float: right;
+                margin: auto;
+            }
+            
+            div.logo
+            {
+                background-color: red;
+                width: 60%;
+                float: left;
+            }
+            
+            img
+            {
+                width:inherit;
+                
+            }
+            
+            div.title
+            {
+                text-align: center;
+            }
+            
+            td
+            {
+                padding: 20px 5px;
+            }
+        
+        </style>
+    </head>
+
+    <body class="landing">
+        <div class="logo"><img src="download.png"></div>
+        <div class="signin">
+            <div class="title">
+                <h3>Sign In</h3>
+            </div>
+            
+            <form>
+                <table>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" id="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password:</label></td>
+                        <td><input type="password" id="password" name="password"></td>
+                    </tr>
+                </table>
+                <input type="submit">
+            </form>
+        </div>
+    </body>
+</html>
