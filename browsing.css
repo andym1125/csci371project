@@ -1,0 +1,61 @@
+div.left {
+    width: 30%;
+    background-color: palevioletred;
+    float: left;
+}
+
+div.right {
+    width: 60%;
+    background-color: skyblue;
+    float: right;
+}
+
+div.browsing {
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+
+
+/* Left side posts */
+div.post {
+    padding: 0px 20px 20px;
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+    z-index: 0;
+}
+
+div.picture {
+    background-color: aquamarine;
+    height: 70%;
+}
+
+div.comments {
+    height: 30%;
+}
+
+/* Right side communities */
+div.comm {
+    padding: 0px 20px 20px;
+    margin: auto;
+    position: relative;
+    z-index: 0;
+}
+
+comm.sticky {
+    position: -webkit sticky;
+    position: sticky;
+    z-index: 0;
+}
+
+div.header {
+    background-color: lightgreen;
+    border-radius: 10px;
+    top: 50px;
+}
+
+div.minipost {
+    background-color: aquamarine;
+    width: inherit;
+}
