@@ -7,19 +7,22 @@ body {
     position: -webkit sticky;
     position: sticky;
     top: 0px;
+    z-index: 1;
 }
 
 div.nav {
     background-color: lightblue;
+    font-size: 20px;
 }
 
 ul.nav {
     background-color: lightblue;
+    clear: both;
     list-style-type: none;
     padding: 0;
 }
 
-li {
+li.nav {
     float: left;
 }
 
@@ -60,4 +63,12 @@ ul.nav a{
 
 .nav .navButton:hover{
     background-color: aliceblue;
+}
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
 }
