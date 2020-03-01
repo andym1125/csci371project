@@ -35,6 +35,7 @@ li.nav {
     display: none;
     position: absolute;
     background-color: lightblue;
+    width: inherit;
     z-index: 1;
 }
 
@@ -57,11 +58,19 @@ ul.nav a{
     padding: 10px;
 }
 
-.navButton a {
-    min-width: inherit;
+li:last-child{
+    float: right;
 }
 
-.nav .navButton:hover{
+.navButton .dropButton {
+    width: inherit;
+}
+
+.navButton a {
+    width: inherit;
+}
+
+.nav .navButton:hover, .dropButton:hover{
     background-color: aliceblue;
 }
 

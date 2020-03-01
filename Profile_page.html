@@ -1,54 +1,64 @@
-	<!DocType html>
-	
-	<html>
-	
-	<head>
-	<style>
-        
-        p.ex1 {
-		border: 5px solid darkblue;
-		outline-style: solid;
-		outline-color: darkblue;
-	}
-        h1 {
-            color: darkblue;
-        }
-	h2 {
-            color: darkblue;
-        }
-     p {
-        color: darkblue;
-        }
-	
-	
-    </style>
+<!DocType html>
+<html>
+    <head>
+        <link rel="stylesheet" href="nav.css" type="text/css">
+        <style>
+            p.ex1 {
+            border: 5px solid darkblue;
+            outline-style: solid;
+            outline-color: darkblue;
+            }
+            h1 {
+                color: darkblue;
+            }
+            h2 {
+                    color: darkblue;
+            }
+             p {
+                color: darkblue;
+            }
+        </style>
     </head>
     <body>
-    <h1 color="darkblue">Your Profile</h1>
+        <div class="nav sticky clearfix">
+            <ul class="nav">
+                <li class="nav">
+                    <a class="navButton" href="browseComm.html">Communities</a>
+                </li>
+                <li class="nav dropdown">
+                    <a class="dropButton" href="userFeed.html">My Communities</a>
+                    
+                    <div class="dropdown-content">
+                        <a class="navButton" href="#Comm1">Community One</a>
+                        <a class="navButton" href="#Comm2">Community Two</a>
+                    </div>
+                </li>
+                <li class="nav">
+                    <a class="navButton" href="Profile_page.html">My Profile</a>
+                </li>
+            </ul>
+        </div><br>
         
-     <div class="clearfix">
+        <h1 color="darkblue">Your Profile</h1>
+
+        <div class="clearfix">
             <div class="img-container">
             <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="wind.com" style="width:25%">
             </div>
-     </div>
-        
+         </div>
+
         <p class="ex1">Profile Settings:<br><br>
-                        Username: <br><br><br><button type="button">Update</button><br><br>
-                        Email:<br><br><br><button type="button">Update</button> <br><br><br><br></p>
-    <h2>BIO</h2>
-    <p> Update your bio:</p>
-    <form action="action_page.php">
-        <textarea name="biography" rows="10" columns="30"></textarea>
-        <br><br>
-        <input type="submit">
+            Username: <br><br><br>
+            <button type="button">Update</button><br><br>
+            Email:<br><br><br>
+            <button type="button">Update</button><br><br><br><br>
+        </p>
+        <h2>BIO</h2>
+        <p> Update your bio:</p>
+        <form action="action_page.php">
+            <textarea name="biography" rows="10" columns="30"></textarea>
+            <br><br>
+            <input type="submit">
         </form>
-            
-    
-   
-            
-        
-    
-    
     </body>
-    </html>
-	
+</html>
