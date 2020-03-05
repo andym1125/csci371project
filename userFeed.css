@@ -28,11 +28,10 @@ div.post {
 
 div.picture {
     background-color: aquamarine;
-    height: 70%;
 }
 
 div.comments {
-    height: 30%;
+    border: 2px Solid aquamarine;
 }
 
 /* Right side communities */
