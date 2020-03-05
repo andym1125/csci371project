@@ -43,6 +43,10 @@ div.comm {
     z-index: 0;
 }
 
+img {
+    width: 100%;
+}
+
 comm.sticky {
     position: -webkit sticky;
     position: sticky;
