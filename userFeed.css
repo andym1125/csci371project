@@ -1,12 +1,14 @@
 div.left {
     width: 30%;
     background-color: palevioletred;
+    display: inline-block;
     float: left;
 }
 
 div.right {
     width: 60%;
     background-color: skyblue;
+    display: block;
     float: right;
 }
 
