@@ -1,12 +1,12 @@
 div.left {
-    width: 30%;
+    width: 15%;
     background-color: palevioletred;
     display: inline-block;
     float: left;
 }
 
 div.right {
-    width: 60%;
+    width: 80%;
     background-color: skyblue;
     display: block;
     float: right;
@@ -38,7 +38,7 @@ div.comments {
 
 /* Right side communities */
 div.comm {
-    padding: 0px 20px 20px;
+    padding: 0px 10px 20px;
     margin: auto;
     position: relative;
     z-index: 0;
