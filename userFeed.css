@@ -44,6 +44,8 @@ div.picture {
 
 div.comments {
     border: 2px Solid aquamarine;
+    font-size: 20px;
+    text-align: left;
 }
 
 /* Right side communities */
