@@ -1,15 +1,25 @@
+body, html {
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+}
+
 div.left {
     width: 15%;
     background-color: palevioletred;
     display: inline-block;
     float: left;
+    height: 90vh;
+    overflow: auto;
 }
 
 div.right {
     width: 80%;
     background-color: skyblue;
-    display: block;
+    display: inline-block;
     float: right;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 div.browsing {
@@ -57,10 +67,14 @@ comm.sticky {
 div.header {
     background-color: lightgreen;
     border-radius: 10px;
-    top: 50px;
+    top: 0px;
 }
 
 div.minipost {
     background-color: aquamarine;
     width: inherit;
+}
+
+div.comm a {
+    text-decoration: none;
 }
