@@ -3,10 +3,12 @@
     <head>
         <link rel="stylesheet" href="nav.css">
         <link rel="stylesheet" href="userFeed.css">
-        <script src="userFeed.js"></script>
+        <!--<script src="userFeed.js"></script>-->
+        
         <title>Imago Community Feed</title>
     </head>
     <body>
+        <script src="postloader.js"></script>
         <div class="nav sticky clearfix">
             <ul class="nav">
                 <li class="nav">
@@ -71,7 +73,7 @@
             </div>
 
             <!-- Right Side -->
-            <div class="browsing right">
+            <div class="browsing right" id="browsing-right">
                 <div id="rightcomm1" class="comm">
                     <div id="comm1" class="header sticky">
                         Community One
@@ -86,30 +88,7 @@
                         </div>
                     </div>
                     -->
-                    <div class="post">
-                        <div id="comm1pic1" class="picture">
-                            <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/reference_guide/cats_and_excessive_meowing_ref_guide/1800x1200_cats_and_excessive_meowing_ref_guide.jpg" alt="cute pic of cat">
-                        </div>
-                        <div class="comments">
-                            Post Comment: Wowza
-                        </div>
-                    </div>
-                    <div id="comm1pic2" class="post">
-                        <div class="picture">
-                            <img src="https://i.ytimg.com/vi/zUu35kIlDkI/maxresdefault.jpg" alt="cat jumping to its doom">
-                        </div>
-                        <div class="comments">
-                            Post Comment: :(
-                        </div>
-                    </div>
-                    <div id="comm1pic3" class="post">
-                        <div class="picture">
-                            <img src="https://www.purina.co.uk/sites/g/files/mcldtz2481/files/2019-09/How%20long%20do%20cats%20sleep_0.jpg" alt="cat sleeping">
-                        </div>
-                        <div class="comments">
-                            Post Comment: zzzzzzzzzzzz
-                        </div>
-                    </div>
+                    <div id="rightcomm1-content"></div>
                     <footer>
                         <button id="buttoncomm1" >Add Post</button>
                     </footer>
@@ -130,5 +109,32 @@
                 </div>
             </div>
         </div>
+        <script>
+                makePost({
+                    id          :"comm1pic1",
+                    feedContainer : "rightcomm1-content",
+                    picAlt         : "cute pic of cat",
+                    picSrc         : "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/reference_guide/cats_and_excessive_meowing_ref_guide/1800x1200_cats_and_excessive_meowing_ref_guide.jpg",
+                    comment     : "Wowza"
+                });
+            
+                makePost({
+                    id        : "comm1pic2",
+                    feedContainer : "rightcomm1-content",
+                    picAlt       : "cat jumping to its doom",
+                    picSrc       : "https://i.ytimg.com/vi/zUu35kIlDkI/maxresdefault.jpg",
+                    comment   : ":("
+                });
+            
+                makePost({
+                    id        : "comm1pic3",
+                    feedContainer : "rightcomm1-content",
+                    picAlt       : "Cat sleeping",
+                    picSrc       : "https://www.purina.co.uk/sites/g/files/mcldtz2481/files/2019-09/How%20long%20do%20cats%20sleep_0.jpg",
+                    comment   : "zzzzzzzzzzzzzz"
+                });
+            
+            
+        </script>
     </body>
 </html>

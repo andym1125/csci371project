@@ -30,6 +30,16 @@ function addPost(idName) {
     community.append(post);
 }
 
+//makePost([
+//            "id"        = "comm1pic3"
+//            "container" = Document.getElementById("browsing-right"),
+//            "alt"       = "Cat sleeping",
+//            "src"       = "https://www.purina.co.uk/sites/g/files/mcldtz2481/files/2019-09/How%20long%20do%20cats%20sleep_0.jpg" alt="cat sleeping",
+//            "comment"   = "zzzzzzzzzzzzzz"
+//])
+
+
+
 function removeButtons() {
     for (var i = 1; i <= numComms; i++) {
         var button = document.getElementById("buttoncomm" + i);
