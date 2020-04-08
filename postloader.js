@@ -1,6 +1,14 @@
 //Conatins a list of all the posts for reference
 var posts = [];
 
+function getComm(idName) {
+    var num = "";
+    for (var i = 4; i < idName.size; i++) {
+        num += idName[i];
+    }
+    return num.value;
+}
+
 function makePost(args)
 {
     //Creates main post
