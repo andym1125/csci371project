@@ -4,11 +4,30 @@
         <link rel="stylesheet" href="nav.css" type="text/css">
         <title>Imago Profile Page</title>
         <style>
-            p.ex1 {
-            border: 5px solid darkblue;
-            outline-style: solid;
-            outline-color: darkblue;
+            .ex1 {
+                border: 5px solid darkblue;
+                outline-style: solid;
+                outline-color: darkblue;
+                display: inline-block;
+                padding: 5vh 20vw;
+                text-align: start;
             }
+            
+            .sidebyside
+            {
+                display:inline;
+            }
+            
+            img
+            {
+                width: 30vw;
+            }
+            
+            .align-center
+            {
+                text-align: center;
+            }
+            
             h1 {
                 color: darkblue;
             }
@@ -43,26 +62,70 @@
         <div class="clearfix">
             <h1 color="darkblue">Your Profile</h1>
 
-            <div class="clearfix">
-                <div class="img-container">
-                <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="wind.com" style="width:25%">
+            <div>
+                <div class="sidebyside">
+                    <img src="https://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="profilepic" >
+                </div>
+                <div id="bio-div" class="" style="float:right; width: 60vw">
+                    <p id="bio-static">
+                        Hi, my name is John Doe, and I work at Texas Lutheran University in Seguin, Texas. This is my bio. I'm a simple guy, with a simple bio. In fact, I didn't spend a whole lot of time on this bio, because I prefer to connect with my friends through conversation instead of static text.
+                    </p>
+                    <textarea id="bio-dyn" style="display: none"></textarea>
+                    <button type="button" id="bio-sub" onclick="toggleUpdate('bio')">Update</button>
                 </div>
              </div>
+            
+            <br>
+            
+            <div class="align-center">
+                <div class="ex1">
+                    <h2>Profile settings:</h2>
 
-            <p class="ex1">Profile Settings:<br><br>
-                Username: <br><br><br>
-                <button type="button">Update</button><br><br>
-                Email:<br><br><br>
-                <button type="button">Update</button><br><br><br><br>
-            </p>
-            <h2>BIO</h2>
-            <p> Update your bio:</p>
-            <form>
-                <textarea name="biography" rows="10" columns="30"></textarea>
-                <br><br>
-                <input type="submit" onclick="window.location.replace('Profile_page')">
-                <input type="button" value="Sign Out" onclick="window.location.replace('landing.html');">
-            </form>
+                    <b>Username:</b><br>
+                    <div id="user-static">JohnnyDozer99</div>
+                    <textarea id="user-dyn" style="display: none"></textarea>
+                    <button id="user-sub" onclick="toggleUpdate('user')">Update</button>
+
+                    <br><br>
+                    
+                    <b>Email:</b><br>
+                    <div id="email-static">jdoe@tlu.edu</div>
+                    <textarea id="email-dyn" style="display: none"></textarea>
+                    <button id="email-sub" onclick="toggleUpdate('email')">Update</button>
+
+                    <br><br>
+
+                </div>
+            </div>
         </div>
+        <script>
+            
+            function toggleUpdate(section)
+            {
+                var static = document.getElementById(section + "-static");
+                var dyn = document.getElementById(section + "-dyn");
+                var button = document.getElementById(section + "-sub");
+                
+                if(static.style.display == "none")
+                {
+                    static.innerHTML = dyn.value.trim();
+                    button.innerHTML = "Update";
+                    
+                    dyn.style.display = "none";
+                    static.style.display = "block";
+                }
+                else
+                {
+                    dyn.value = static.innerHTML.trim();
+                    button.innerHTML = "Save";
+                    
+                    dyn.style.width = static.style.width;
+                    dyn.style.height = static.style.height;
+                    
+                    static.style.display = "none";
+                    dyn.style.display = "block";
+                }
+            }
+        </script>
     </body>
 </html>
