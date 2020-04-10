@@ -24,9 +24,11 @@
             
             div.logo
             {
-                background-color: red;
-                width: 60%;
+                background-color: aliceblue;
+                padding: 2vw;
+                width: 50%;
                 float: left;
+                border-radius: 7px;
             }
             
             img
@@ -55,7 +57,7 @@
                 <h3>Sign In</h3>
             </div>
             
-            <form action="browseComm.html">
+            <form action="browseComm.html" id="form">
                 <table>
                     <tr>
                         <td><label for="email">Email:</label></td>
@@ -67,8 +69,32 @@
                     </tr>
                 </table>
                 <input type="button" value="Or Sign Up" onclick="window.location.replace('signup.html');">
-                <input type="submit">
+                <input type="submit" id="submit">
             </form>
         </div>
+        <script>
+            function authSignIn()
+            {
+                var email = document.getElementById("email").value;
+                var pass = document.getElementById("password").value;
+                
+                if(!(email == "jdoe@tlu.edu" && pass == "root"))
+                    event.preventDefault();
+            }
+            
+            function bindEvent()
+            {
+                var submit = document.getElementById("form");
+                if(submit.addEventListener)
+                    submit.addEventListener("submit", authSignIn, false);
+                else if(submit.attachEvent)
+                    submit.attachEvent("onsubmit", authSignIn);
+            }
+            bindEvent();
+//            if(document.addEventListener)
+//                document.addEventListener("load", bindEvent, false);
+//            else if(document.attachEvent)
+//                document.attachEvent("onload", bindEvent);
+        </script>
     </body>
 </html>
