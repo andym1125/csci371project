@@ -30,100 +30,71 @@
         
         <div class="clearfix">
             <!-- Left Side -->
-            <div class="browsing left">
-                <div class="comm">
-                    <a href="#comm1">
-                        <div class="header sticky">
-                            Community One
-                        </div>
-                    </a>
-                    <div class="minipost" id="comm1-mini">
-                        <!-- Preview filled in by Postloader -->
-                    </div>
-                </div>
-
-                <div class="comm">
-                    <a href="#comm2">
-                        <div class="header sticky">
-                            Community Two
-                        </div>
-                    </a>
-                    <div class="minipost" id="comm2-mini">
-                        <!-- Preview filled in by Postloader -->
-                    </div>
-                </div>
+            <div class="browsing leftMajor" id="minipost-left">
+                <!-- Added by js -->
             </div>
 
             <!-- Right Side -->
-            <div class="browsing right" id="browsing-right">
-                <div id="rightcomm1" class="comm">
-                    <div id="comm1" class="header sticky">
-                        Community One
-                    </div>
-                    <div id="rightcomm1-content">
-                        <!-- This is where posts are put by js -->
-                    </div>
-                    <footer>
-                        <button id="buttoncomm1" onclick="addPostTest()">Add Post</button>
-                    </footer>
+            <div class="browsing rightMajor" id="browsing-right">
+                <div id="browsing-right-comms">
+                    <!-- Added by js -->
                 </div>
-
-                <div id="comm2" class="comm">
-                    <div id="rightcomm2" class="header sticky">
-                        Community Two
-                    </div>
-                    <div id="rightcomm2-content">
-                        <!-- This is where posts are put by js -->
-                    </div>
-                    <footer>
-                        <button id="buttoncomm2" >Add Post</button>
-                    </footer>
-                </div>
+                
+                <form>
+                    Create the name of your community: <input type="text" id="commName-input">
+                </form>
+                <button onclick="createComm(createCommArgs(this))">Add Community</button>
+                <p id="comm-output"></p>
             </div>
         </div>
         <script>
-                makePost({
-                    id          :"comm1pic1",
-                    feedContainer : "rightcomm1-content",
-                    previewContainer : "comm1-mini",
-                    picAlt         : "cute pic of cat",
-                    picSrc         : "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/reference_guide/cats_and_excessive_meowing_ref_guide/1800x1200_cats_and_excessive_meowing_ref_guide.jpg",
-                    comment     : "Wowza"
-                });
+            //Community 1
+            createComm({commName : "Cats"});
             
-                makePost({
-                    id        : "comm1pic2",
-                    feedContainer : "rightcomm1-content",
-                    previewContainer : "comm1-mini",
-                    picAlt       : "cat jumping to its doom",
-                    picSrc       : "https://i.ytimg.com/vi/zUu35kIlDkI/maxresdefault.jpg",
-                    comment   : ":("
-                });
-            
-                makePost({
-                    id        : "comm1pic3",
-                    feedContainer : "rightcomm1-content",
-                    previewContainer : "comm1-mini",
-                    picAlt       : "Cat sleeping",
-                    picSrc       : "https://www.purina.co.uk/sites/g/files/mcldtz2481/files/2019-09/How%20long%20do%20cats%20sleep_0.jpg",
-                    comment   : "zzzzzzzzzzzzzz"
-                });
-            
+            makePost({
+                id          : "comm1-pic1",
+                feedContainer : "comm1-content",
+                previewContainer : "comm1-mini",
+                picAlt         : "cute pic of cat",
+                picSrc         : "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/reference_guide/cats_and_excessive_meowing_ref_guide/1800x1200_cats_and_excessive_meowing_ref_guide.jpg",
+                comment     : "Wowza"
+            });
+
+            makePost({
+                id        : "comm1-pic2",
+                feedContainer : "comm1-content",
+                previewContainer : "comm1-mini",
+                picAlt       : "cat jumping to its doom",
+                picSrc       : "https://i.ytimg.com/vi/zUu35kIlDkI/maxresdefault.jpg",
+                comment   : ":("
+            });
+
+            makePost({
+                id        : "comm1-pic3",
+                feedContainer : "comm1-content",
+                previewContainer : "comm1-mini",
+                picAlt       : "Cat sleeping",
+                picSrc       : "https://www.purina.co.uk/sites/g/files/mcldtz2481/files/2019-09/How%20long%20do%20cats%20sleep_0.jpg",
+                comment   : "zzzzzzzzzzzzzz"
+            });
+
             // Community 2
+            createComm({commName : "Text Rebels"});
             
-                makePost({
-                    id        : "comm2pic1",
-                    feedContainer : "rightcomm2-content",
-                    previewContainer : "comm2-mini",
-                    postBody: "Hello",
-                    comment   : "Bye"
-                });
+            makePost({
+                id        : "comm2-pic1",
+                feedContainer : "comm2-content",
+                previewContainer : "comm2-mini",
+                picAlt: "Hello",
+                picSrc: "none",
+                comment   : "Bye"
+            });
             
             function addPostTest()
             {
                 makePost({
-                    id        : "comm1pic3",
-                    feedContainer : "rightcomm1-content",
+                    id        : "comm1-pic3",
+                    feedContainer : "comm1-right-content",
                     previewContainer : "comm1-mini",
                     picAlt       : "Cat sleeping",
                     picSrc       : "https://www.purina.co.uk/sites/g/files/mcldtz2481/files/2019-09/How%20long%20do%20cats%20sleep_0.jpg",

@@ -4,7 +4,7 @@ body, html {
     overflow: hidden;
 }
 
-div.left {
+div.leftMajor {
     width: 15%;
     background-color: palevioletred;
     display: inline-block;
@@ -13,7 +13,7 @@ div.left {
     overflow: auto;
 }
 
-div.right {
+div.rightMajor {
     width: 80%;
     background-color: skyblue;
     display: inline-block;
@@ -56,6 +56,10 @@ div.comm {
     z-index: 0;
 }
 
+div.comm form {
+    text-align: right;
+}
+
 img {
     width: 100%;
 }
@@ -72,6 +76,12 @@ div.header {
     top: 0px;
 }
 
+h1.header, h2.header, h3.header, h4.header, h5.header, h6.header{
+    background-color: lightgreen;
+    border-radius: 10px;
+    top: 0px;
+}
+
 div.minipost {
     background-color: aquamarine;
     width: inherit;
@@ -79,4 +89,8 @@ div.minipost {
 
 div.comm a {
     text-decoration: none;
+}
+
+#comm-output {
+    padding-bottom: 40px;
 }
