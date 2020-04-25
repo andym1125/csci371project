@@ -156,6 +156,12 @@ function createComm(commArgs) {
         posts.push([]);
         var commNum = posts.length;
         
+        // Dropdown content in the nav bar.
+        var dropdownLink = document.createElement("a");
+        dropdownLink.className = "navButton";
+        dropdownLink.href = "#comm" + commNum;
+        dropdownLink.innerHTML = commArgs.commName;
+        
         // MINI DIV (LEFT)
         
         var miniDiv = document.createElement("div");
@@ -236,6 +242,9 @@ function createComm(commArgs) {
         comm.appendChild(commOutput);
         comm.appendChild(document.createElement("text"));
         commMain.appendChild(comm);
+        
+        var dropdown = document.getElementsByClassName("dropdown-content");
+        dropdown.item(0).appendChild(dropdownLink);
         
         if (!!commArgs.userGenned) {
             clearAllOutput();
