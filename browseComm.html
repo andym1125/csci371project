@@ -35,13 +35,22 @@
             }
             
             div.browseComm {
-                width:75%;
+                width:73%;
                 float:left;
+                display: inline-block;
             }
             
             div.descComm {
-                width:25%;
+                width:23%;
                 float:right;
+                position: -webkit sticky;
+                position:sticky;
+                top: 50;
+                z-index: 1;
+            }
+            
+            #p.info {
+                height: 85vh;
             }
         </style>
     </head>
@@ -70,17 +79,17 @@
                 <div class="clearfix">
                     <div class="boxLeft">
                         <h2 class="commTitle">Fitness</h2>
-                        <img onmouseover="setDescription('This communiy is about fitness. You're just a post away from flexing your kille bod. Join this community today!')" src="https://doublegsports.com/wp-content/uploads/2015/03/generic-fitness-class.jpg" alt="wind.com">
+                        <img onmouseover="setDescription('This communiy is about fitness. You're just a post away from flexing your kille bod. Join this community today!');" src="https://doublegsports.com/wp-content/uploads/2015/03/generic-fitness-class.jpg" alt="wind.com">
                     </div>
 
                     <div class="boxLeft">
                         <h2 class="commTitle">Music</h2>
-                        <img onmouseover="setDescription('This community is about music. Join this community to connect with thousands of other music lovers!')" src="https://media.blogto.com/articles/20190726-drake.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70" alt="YO.com">
+                        <img onmouseover="setDescription('This community is about music. Join this community to connect with thousands of other music lovers!');" src="https://media.blogto.com/articles/20190726-drake.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70" alt="YO.com">
                     </div>
 
                     <div class="boxLeft">
                         <h2 class="commTitle">Fashion</h2>
-                        <img onmouseover="setDescription('This community is about fashion. Connect with numerous fashion lovers and share your outfit ideas today!')" src="https://d2fzf9bbqh0om5.cloudfront.net/blog/posts/content/5574.jpg" alt="LOL.com" >
+                        <img onmouseover="setDescription('This community is about fashion. Connect with numerous fashion lovers and share your outfit ideas today!');" src="https://d2fzf9bbqh0om5.cloudfront.net/blog/posts/content/5574.jpg" alt="LOL.com" >
                     </div>
                 </div>
 
@@ -91,35 +100,35 @@
                     </div>
                     <div class="boxLeft">
                         <h2 class="commTitle">Technology</h2>
-                        <img onmouseover="setDescription('This community is about technology. Share cool projects with tech fans like yourself today!')" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/computer-monitors-index-1573157429.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*" alt="YO.com" >
+                        <img onmouseover="setDescription('This community is about technology. Share cool projects with tech fans like yourself today!');" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/computer-monitors-index-1573157429.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*" alt="YO.com" >
                     </div>
                     <div class="boxLeft">
                         <h2 class="commTitle">Gaming</h2>
-                        <img onmouseover="setDescription('This community is about gaming. Show your best in game screenshots in this community and show these other games what you're about!')" src="https://i.pcmag.com/imagery/articles/05pGSLeBVTWQNoDPNG2midy-4.fit_scale.size_2698x1517.v1573262409.jpg" alt="LOL.com" >
+                        <img onmouseover="setDescription('This community is about gaming. Show your best in game screenshots in this community and show these other games what you're about!');" src="https://i.pcmag.com/imagery/articles/05pGSLeBVTWQNoDPNG2midy-4.fit_scale.size_2698x1517.v1573262409.jpg" alt="LOL.com" >
                     </div>
                 </div>
 
                 <div class="clearfix">
                     <div class="boxLeft">
                         <h2 class="commTitle">Tattoos</h2>
-                        <img onmouseover="setDescription('This page has tattoos. Fan of the art? Well this is the community for you! Discover thousands of tattoo ideas in this community. Join Today')"   src="https://img.redbull.com/images/c_fill,g_auto,w_1150,h_1438/q_70,f_auto/redbullcom/2016/11/02/1331827160757_1/dobrodru%C5%BEn%C3%A1-tetov%C3%A1n%C3%AD-zem%C4%9B-a-voda.jpg" alt="wind.com" >
+                        <img onmouseover="setDescription('This page has tattoos. Fan of the art? Well this is the community for you! Discover thousands of tattoo ideas in this community. Join Today');"   src="https://img.redbull.com/images/c_fill,g_auto,w_1150,h_1438/q_70,f_auto/redbullcom/2016/11/02/1331827160757_1/dobrodru%C5%BEn%C3%A1-tetov%C3%A1n%C3%AD-zem%C4%9B-a-voda.jpg" alt="wind.com" >
                     </div>
                     <div class="boxLeft">
                         <h2 class="commTitle">Art</h2>
-                        <img onmouseover="setDescription('This community is about art. Indulge your inner picasso with a community full of works from artists just like you! Join today!')" src="https://i.ytimg.com/vi/_nwYYFV03dM/maxresdefault.jpg" alt="YO.com" >
+                        <img onmouseover="setDescription('This community is about art. Indulge your inner picasso with a community full of works from artists just like you! Join today!');" src="https://i.ytimg.com/vi/_nwYYFV03dM/maxresdefault.jpg" alt="YO.com" >
                     </div>
                     <div class="boxLeft">
                         <h2 class="commTitle">Pets</h2>
-                        <img onmouseover="setDescription('This community is about pets. Whether you're a dog lover or a fan of felines we can all agree that animals are so cute! Join a community of other like-minded individuals today!')" src="https://www.ecnmy.org/wp-content/uploads/2019/05/pets-3715733_960_720.jpg" alt="LOL.com">
+                        <img onmouseover="setDescription('This community is about pets. Whether you're a dog lover or a fan of felines we can all agree that animals are so cute! Join a community of other like-minded individuals today!');" src="https://www.ecnmy.org/wp-content/uploads/2019/05/pets-3715733_960_720.jpg" alt="LOL.com">
                     </div>
                 </div>
             </div>
 
 
-            <div class="descComm">
-                <p  style="position: fixed; " >Community Description:</p>
+            <div class="descComm sticky">
+                <h2 class="commTitle">Community Description</h2>
                 <br><br>
-                <p id="info"  style="position: fixed; " ></p>
+                <p id="info"></p>
             </div>
         </div>
         <script>
