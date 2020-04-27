@@ -77,9 +77,43 @@
             {
                 var email = document.getElementById("email").value;
                 var pass = document.getElementById("password").value;
+                var validated = false;
                 
-                if(!(email == "jdoe@tlu.edu" && pass == "root"))
+                if(!(email && pass))
+                {
+                    alert("Please enter a username AND a password.");
+                    //Note that if this isn't here, an empty username 
+                    //and password is an acceptable credential
                     event.preventDefault();
+                }
+                
+                //Initializes credentials
+                if(localStorage.getItem("users") == null)
+                    localStorage.setItem("users", "jdoe@tlu.edu,andy@tlu.edu,");
+                if(localStorage.getItem("pass") == null)
+                    localStorage.setItem("pass", "root,andy,");
+                
+                var regex = /,/;
+                var users = localStorage.getItem("users").split(/,/);
+                var passes = localStorage.getItem("pass").split(/,/);
+                
+                for(var i = 0; i < users.length; i++)
+                {
+                    if(users[i] === email && passes[i] === pass)
+                        validated = true;
+                }
+                
+                //Default user
+                if(email == "su@tlu.edu" && pass == "root")
+                    validated = true;
+                
+                if(!validated)
+                {
+                    event.preventDefault();
+                    alert("Credentials not valid.");
+                    document.getElementById("email").value = "";
+                    document.getElementById("password").value = "";
+                }
             }
             
             function bindEvent()
@@ -90,11 +124,11 @@
                 else if(submit.attachEvent)
                     submit.attachEvent("onsubmit", authSignIn);
             }
-            bindEvent();
-//            if(document.addEventListener)
-//                document.addEventListener("load", bindEvent, false);
-//            else if(document.attachEvent)
-//                document.attachEvent("onload", bindEvent);
+            
+            if(window.addEventListener)
+                window.addEventListener("load", bindEvent, false);
+            else if(window.attachEvent)
+                window.attachEvent("onload", bindEvent);
         </script>
     </body>
 </html>

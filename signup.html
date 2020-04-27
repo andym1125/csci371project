@@ -7,24 +7,24 @@
     </head>
 
     <body>
-        <form class="signup" action="landing.html">
+        <form class="signup" action="landing.html" id="form">
             <label for="email">Email:</label> <br>
-            <input type="email" id="email" name="email"> <br>
+            <input required type="email" id="email" name="email"> <br>
             
             <br><hr><br>
             
             <label for="screenname">Choose a screen name:</label> <br>
-            <input type="text" id="screenname" name="screenname"> <br>
+            <input required type="text" id="screenname" name="screenname"> <br>
             
             <br><hr><br>
             
             <label for="password">Enter Password:</label> <br>
-            <input type="password" name="password"> <br>
+            <input required type="password" name="password" id="password"> <br>
             
             <br>
             
             <label for="repassword">Re-enter Password:</label> <br>
-            <input type="password" name="repassword"> <br>
+            <input required type="password" name="repassword" id="repassword"> <br>
             
             <br><hr><br>
             
@@ -47,5 +47,78 @@
             <input type="submit" value="Create Account!">
         </form>
     
+        <script>
+            
+            function submitForm()
+            {
+                if(validateForm(event))
+                    saveCreds(document.getElementById("email").value, document.getElementById("password").value);
+            }
+            
+            function validateForm(event)
+            {
+                var email = document.getElementById("email").value;
+                if(!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
+                {
+                    alert("Hmm, that email doesn't look right. Make sure your email is correct.");
+                    event.preventDefault();
+                    return false;
+                }
+                
+                var name = document.getElementById("screenname").value;
+                if(name.match(/[sS$][hH][Ii1!][tT]/) || name.match(/[fF][uU][cC]?[kK]/) || name.match(/[gG][0oO][dD]?.?[Dd][aA@][mM][nN]?/))
+                {
+                    alert("Does your screen name contain an expletive? That's not very nice. Try again.");
+                    event.preventDefault();
+                    return false;
+                }
+                if(name.length >= 13)
+                {
+                    alert("Your screen name is too long. Keep it to 12 characters.");
+                    event.preventDefault();
+                    return false;
+                }
+                
+                var pass1 = document.getElementById("password").value;
+                var pass2 = document.getElementById("repassword").value;
+                if(pass1.length < 8)
+                {
+                    alert("Passwords must be at least 8 characters.");
+                    event.preventDefault();
+                    return false;
+                }
+                if(pass1 !== pass2)
+                {
+                    alert("Passwords must match");
+                    event.preventDefault();
+                    return false;
+                }
+                
+                return true;
+            }
+            
+            function saveCreds(email, pass)
+            {
+                localStorage.setItem("users", localStorage.getItem("users") + email + ",");
+                localStorage.setItem("pass", localStorage.getItem("pass") + pass + ",");
+                alert("New account created.");
+            }
+            
+            function bindEvent()
+            {
+                var submit = document.getElementById("form");
+                if(submit.addEventListener)
+                    submit.addEventListener("submit", submitForm, false);
+                else if(submit.attachEvent)
+                    submit.attachEvent("onsubmit", submitForm);
+            }
+            
+            if(window.addEventListener)
+                window.addEventListener("load", bindEvent, false);
+            else if(window.attachEvent)
+                window.attachEvent("onload", bindEvent);
+        
+        
+        </script>
     </body>
 </html>
